@@ -1,10 +1,13 @@
 # elasticsearch_windows_auto_install
 elasticsearch_windows_auto_install
+
 （1）、【安装步骤】
 在安装路径elasticsearch-win下，右键elasticsearch_auto_install.bat，点击：以管理员身份运行，即可完成一键安装。
 
+
 （2）、【日志】
 日志位置：.\\logs\\es_auto_install.log
+
 
 （3）、【验证是否安装成功】
 建议用火狐浏览器访问：http://localhost:9200/
@@ -22,13 +25,16 @@ elasticsearch_windows_auto_install
   "tagline" : "You Know, for Search"
 }
 
+
 （4）、【访问地址】
 建议用火狐浏览器访问：
   【1】 head插件访问地址： http://localhost:9200/_plugin/head/
   【2】 kibana插件访问地址：http://localhost:5601
+  
 
 （5）、【删除服务】
 在安装路径elasticsearch-win下，右键elasticsearch_uninstall.bat，点击：以管理员身份运行，即可完成一键卸载服务。
+
 
 （6）、【卸载】
 在安装路径elasticsearch-win下，双击：unins000.exe 即可完成卸载。
