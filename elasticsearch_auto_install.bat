@@ -58,6 +58,17 @@ if Defined JAVA_HOME (
 rem :set_environment
 rem 设置系统环境变量
 
+set curlpath=%curpath%
+rem 设置curl
+if exist %windir%\SysWOW64 ( 
+set curlpath=%curpath%\curl\win64
+) else (
+set curlpath=%curpath%\curl\win32
+)
+echo [%CurDateTime%]curlpath=%curlpath%
+rem 设置CURL环境变量
+setx -m CURL_HOME "%curlpath%"
+setx -m PATH "%curlpath%;%PATH%"
 	
 :run
 rem 第1步：以服务的形式安装ES
@@ -148,7 +159,6 @@ popd
 
 rem new add by ycy 2016-7-11
 echo [%CurDateTime%]"installed 70%%......"
-
 echo [%CurDateTime%]"STEP 6. Start Kibana..."
 echo [%CurDateTime%]"STEP 6. Start Kibana...." >> %auto_install_log%
 rem 第6步：启动kibana

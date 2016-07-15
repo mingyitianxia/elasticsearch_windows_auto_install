@@ -8,7 +8,7 @@ set binpath=%curpath%\bin
 
 rem 停止ES服务
 call service.bat stop
-echo elasticsearch-service-x86 service has been stopped!"
+echo "elasticsearch-service-x86 service has been stopped!"
 
 set kibana_bin_path=%curpath%\kibana-4.5.1-windows\bin
 set logstash_bin_path=%curpath%\logstash-2.3.3\bin
